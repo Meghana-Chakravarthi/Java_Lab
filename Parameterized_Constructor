@@ -1,0 +1,34 @@
+package java_lab;
+class pc{
+	String name;
+	String section;
+	int classroomno;
+	pc() {    // Method with no parameters
+		System.out.println("Default Constructor");
+	}
+	pc(String name){  // Method with single parameter
+		System.out.println("Student Name: "+ name);
+	}
+	pc(String name,String section){ // Method with two parameters
+		System.out.println("Student '"+name+"' belongs to '"+section+"' section.");
+	}
+	pc(String name,String section,int classroomno){ // Method with three parameters
+		System.out.println("Student '"+name+"' belongs to '"+section+"' section. Class Room No: "+classroomno);
+	}
+}
+public class ParameterizedConstructor {
+
+	public static void main(String[] args) {
+		pc p = new pc(); // No parameters
+		pc p1 = new pc("Meghana"); // One parameter
+		pc p2 = new pc("Meghana","E"); // Two parameters
+		pc p3 = new pc("Meghana","E",206);
+	}
+}
+
+
+OUTPUT:
+Default Constructor
+Student Name: Meghana
+Student 'Meghana' belongs to 'E' section.
+Student 'Meghana' belongs to 'E' section. Class Room No: 206
