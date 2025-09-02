@@ -1,0 +1,77 @@
+package java_lab;
+import java.util.*;
+class BankAccount{
+	String name;
+	private String accno;    //private 
+	private int balance;  //private
+    int amount;	
+
+// setter for accno
+public void setaccno(String accno) {
+	this.accno = accno;
+}
+// getter for accno
+public String getaccno() {
+	return accno;
+}
+
+// setter for balance
+public void setbalance(int balance) {
+	this.balance = balance;
+}
+// getter for balance
+public int getbalance() {
+	return balance;
+}
+
+// Depositing amount
+public int deposit(int amount) {
+	if (amount<0) {
+		System.out.println("INVALID DEPOSIT");
+		return 0;
+	}
+	else
+	{
+		balance+=amount;
+		return balance;
+	}
+}
+}
+public class Encapsulation {
+
+	public static void main(String[] args) {
+		BankAccount b = new BankAccount();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Account Holder Name:"); // Input account Holder name
+		String name = sc.nextLine();
+		System.out.println("Enter Account Number: "); // input account number
+		String accno = sc.nextLine();
+		b.setbalance(20000);
+		b.setaccno(accno);
+		System.out.println("Enter Amount to be deposited: ");
+		int am = sc.nextInt();
+		int new_balance = b.deposit(am);
+		
+		System.out.println("------ Account Details ------");
+		System.out.println("Account Holder: "+name);
+		System.out.println("Account Number: "+b.getaccno());
+		System.out.println("Initial Balance: "+ 20000);
+		System.out.println("Amount Deposited: "+ am);
+		System.out.println("New Balance: "+new_balance);
+	}
+}
+
+OUTPUT:
+Enter Account Holder Name:
+Laxmi Meghana
+Enter Account Number: 
+24WH1A05X2
+Enter Amount to be deposited: 
+15000
+------ Account Details ------
+Account Holder: Laxmi Meghana
+Account Number: 24WH1A05X2
+Initial Balance: 20000
+Amount Deposited: 15000
+New Balance: 35000
+
