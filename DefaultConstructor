@@ -1,0 +1,21 @@
+package sample;
+class Basic{
+	String name;
+	int age;
+	Basic() {
+		System.out.println("This is Default Constructor");
+	}
+}
+public class DefaultConstructor {
+
+	public static void main(String[] args) {
+		Basic b =new Basic();
+		b.name="Meghana";
+		b.age=18;
+		System.out.println("I am "+b.name+" of "+b.age+" years old.");
+	}
+}
+
+OUTPUT:
+This is Default Constructor
+I am Meghana of 18 years old.
