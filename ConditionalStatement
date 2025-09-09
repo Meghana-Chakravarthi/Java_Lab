@@ -1,0 +1,27 @@
+package sample;
+import java.util.*;
+public class ConditionalStatement {
+	public static void main (String[] args) {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter First Number:");
+		int a = s.nextInt();
+		System.out.println("Enter Second Number:");
+		int b = s.nextInt();
+		if (a>b) {
+			System.out.println("First Number ("+a+") is greater than Second Number ("+b+")");
+		}
+		else if (a<b) {
+			System.out.println("First Number ("+a+") is less than Second Number ("+b+")");
+		}
+		else {
+			System.out.println("Both the numbers are EQUAL");
+		}
+	}
+}
+
+OUTPUT:
+Enter First Number:
+256
+Enter Second Number:
+976
+First Number (256) is less than Second Number (976)
